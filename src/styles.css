@@ -1,0 +1,234 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Artane Nails & Beauty Lounge — luxury editorial design system.
+ * Palette: Warm Ivory, Nude Beige, Matte Black, Warm Gray, Dusty Rose, Soft Gold, Cream.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 8px);
+  --radius-2xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-rose: var(--accent);
+  --color-ivory: var(--background);
+  --color-beige: var(--muted);
+  --color-ink: var(--foreground);
+
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+
+  --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+:root {
+  --radius: 1.75rem;
+
+  /* Warm Ivory #FAF7F2 */
+  --background: oklch(0.972 0.008 80);
+  /* Matte Black #111111 */
+  --foreground: oklch(0.18 0 0);
+
+  /* Cream White */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0 0);
+
+  /* Matte Black primary */
+  --primary: oklch(0.18 0 0);
+  --primary-foreground: oklch(0.99 0 0);
+
+  /* Nude Beige #F3EAE3 as secondary */
+  --secondary: oklch(0.93 0.018 50);
+  --secondary-foreground: oklch(0.18 0 0);
+
+  /* Nude Beige as muted soft section bg */
+  --muted: oklch(0.93 0.018 50);
+  --muted-foreground: oklch(0.5 0.01 60);
+
+  /* Dusty Rose #D8A7B1 accent */
+  --accent: oklch(0.78 0.06 12);
+  --accent-foreground: oklch(0.18 0 0);
+
+  /* Soft Gold #C6A769 */
+  --gold: oklch(0.74 0.09 80);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  --border: oklch(0.9 0.01 60);
+  --input: oklch(0.9 0.01 60);
+  --ring: oklch(0.78 0.06 12);
+}
+
+.dark {
+  /* Project doesn't toggle dark mode; keep parity. */
+  --background: oklch(0.972 0.008 80);
+  --foreground: oklch(0.18 0 0);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .text-gold {
+    color: var(--gold);
+  }
+  .bg-gold {
+    background-color: var(--gold);
+  }
+  .border-gold {
+    border-color: var(--gold);
+  }
+  .bg-ivory {
+    background-color: var(--background);
+  }
+  .bg-beige {
+    background-color: var(--muted);
+  }
+  .bg-rose {
+    background-color: var(--accent);
+  }
+  .text-rose {
+    color: var(--accent);
+  }
+  .bg-ink {
+    background-color: var(--foreground);
+  }
+  .text-ink {
+    color: var(--foreground);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  .tracking-luxe {
+    letter-spacing: 0.22em;
+  }
+}
+
+/* Animations */
+@keyframes ken-burns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.12);
+  }
+}
+.animate-ken-burns {
+  animation: ken-burns 14s ease-out forwards;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+.animate-shimmer {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  background-size: 400px 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 3.5s infinite linear;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  opacity: 0;
+}
+.reveal.is-visible {
+  animation: reveal-up 0.8s ease-out forwards;
+}
+
+@keyframes float-arrow {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+}
+.animate-float-arrow {
+  animation: float-arrow 2.2s ease-in-out infinite;
+}
