@@ -99,12 +99,12 @@ export function Navbar() {
 
         <Link
           to="/"
-          className="flex items-center justify-center overflow-hidden h-16 md:h-24 w-48 md:w-64"
+          className="flex items-center justify-center"
         >
           <img
             src="/logo.png"
             alt="Artane Nails & Beauty Lounge Logo"
-            className="w-full h-full object-cover scale-[1.35] md:scale-[1.5] drop-shadow-[0_2px_10px_rgba(255,255,255,0.5)] transition-transform hover:scale-[1.6]"
+            className="h-16 md:h-28 w-auto object-contain drop-shadow-[0_2px_12px_rgba(255,255,255,0.85)] transition-transform hover:scale-105"
           />
         </Link>
 
