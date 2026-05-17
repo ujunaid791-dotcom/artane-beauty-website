@@ -67,21 +67,23 @@ export function Navbar() {
             </button>
 
             {dropdownOpen && (
-              <div className="absolute left-0 top-full mt-3 w-48 rounded-xl border border-border bg-white shadow-card py-2 overflow-hidden">
-                {links.map((l) => (
-                  <Link
-                    key={l.to}
-                    to={l.to}
-                    onClick={() => setDropdownOpen(false)}
-                    activeOptions={{ exact: l.to === "/" }}
-                    className="block px-5 py-2.5 text-[14px] font-medium text-ink hover:bg-beige transition-colors"
-                    activeProps={{
-                      className: "block px-5 py-2.5 text-[14px] font-medium !text-rose bg-beige/50",
-                    }}
-                  >
-                    {l.label}
-                  </Link>
-                ))}
+              <div className="absolute left-0 top-full pt-3 w-48">
+                <div className="rounded-xl border border-border bg-white shadow-card py-2 overflow-hidden">
+                  {links.map((l) => (
+                    <Link
+                      key={l.to}
+                      to={l.to}
+                      onClick={() => setDropdownOpen(false)}
+                      activeOptions={{ exact: l.to === "/" }}
+                      className="block px-5 py-2.5 text-[14px] font-medium text-ink hover:bg-beige transition-colors"
+                      activeProps={{
+                        className: "block px-5 py-2.5 text-[14px] font-medium !text-rose bg-beige/50",
+                      }}
+                    >
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </div>
@@ -98,10 +100,13 @@ export function Navbar() {
         {/* Center: Logo */}
         <Link
           to="/"
-          className={`font-display text-xl md:text-2xl ${textColor}`}
-          style={{ letterSpacing: "0.04em" }}
+          className="flex items-center justify-center"
         >
-          Artane <span className="text-gold">·</span> Beauty Lounge
+          <img
+            src="/logo.png"
+            alt="Artane Nails & Beauty Lounge Logo"
+            className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-105"
+          />
         </Link>
 
         {/* Right: Book Now */}

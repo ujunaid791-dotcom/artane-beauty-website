@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CTAButton } from "@/components/CTAButton";
 import { SectionReveal } from "@/components/SectionReveal";
-import { Clock, MapPin, Phone } from "lucide-react";
+import { Clock, MapPin, Phone, Building2, Scissors } from "lucide-react";
 import { useBooking } from "@/lib/BookingContext";
 
 export const Route = createFileRoute("/contact")({
@@ -74,16 +74,22 @@ function ContactPage() {
 
             <div className="mt-10 rounded-[28px] bg-beige p-6">
               <p className="text-gold uppercase tracking-luxe text-xs">How to Find Us</p>
-              <ul className="mt-4 space-y-2 text-muted-foreground">
-                <li>📍 Near Artane Roundabout</li>
-                <li>🏦 Beside AIB Bank</li>
-                <li>🪒 Upstairs from Abbas Turkish Barber</li>
+              <ul className="mt-4 space-y-3 text-muted-foreground">
+                <li className="flex items-center gap-3"><MapPin size={18} className="text-rose" /> Near Artane Roundabout</li>
+                <li className="flex items-center gap-3"><Building2 size={18} className="text-rose" /> Beside AIB Bank</li>
+                <li className="flex items-center gap-3"><Scissors size={18} className="text-rose" /> Upstairs from Abbas Turkish Barber</li>
               </ul>
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
               <CTAButton onClick={openModal} variant="primary">
-                Call to Book
+                Book Now
+              </CTAButton>
+              <CTAButton
+                href="tel:+353899508863"
+                variant="outline"
+              >
+                Contact Us
               </CTAButton>
               <CTAButton
                 href="https://maps.google.com/?q=58+Saint+Brigid%27s+Road,+Artane,+Dublin+5"

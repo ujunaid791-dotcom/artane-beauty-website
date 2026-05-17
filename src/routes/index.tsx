@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ChevronDown, MapPin, Star } from "lucide-react";
+import { ArrowRight, ChevronDown, MapPin, Star, Sparkles, Heart, Gem, Eye, Crown, Building2, Scissors, Phone } from "lucide-react";
 import { CTAButton } from "@/components/CTAButton";
 import { GrandOpeningBanner } from "@/components/GrandOpeningBanner";
 import { SectionReveal } from "@/components/SectionReveal";
@@ -30,32 +30,32 @@ export const Route = createFileRoute("/")({
 
 const services = [
   {
-    icon: "💅",
+    icon: <Sparkles className="text-gold" size={36} />,
     title: "Manicure & BIAB",
     desc: "File & polish, Shellac, BIAB overlays & refills.",
   },
   {
-    icon: "🦶",
+    icon: <Heart className="text-gold" size={36} />,
     title: "Pedicure",
     desc: "For women, men & children — from mini to full deluxe.",
   },
   {
-    icon: "💎",
+    icon: <Gem className="text-gold" size={36} />,
     title: "Nail Extensions",
     desc: "Acrylic, full extension, BIAB extension & refills.",
   },
   {
-    icon: "👁️",
+    icon: <Eye className="text-gold" size={36} />,
     title: "Eyes, Brows & Face",
     desc: "Threading, lash lift, brow lamination, facials.",
   },
   {
-    icon: "✨",
+    icon: <Sparkles className="text-gold" size={36} />,
     title: "Waxing & Lashes",
     desc: "Face & body waxing, classic, hybrid & volume lashes.",
   },
   {
-    icon: "👸",
+    icon: <Crown className="text-gold" size={36} />,
     title: "Princess Services",
     desc: "Cute mini treatments designed just for kids.",
   },
@@ -86,11 +86,15 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1800&q=80"
-          alt="Luxury manicure being applied at Artane Nails & Beauty Lounge"
-          className="absolute inset-0 h-full w-full object-cover animate-ken-burns"
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 h-full max-w-7xl mx-auto px-6 lg:px-10 flex items-center">
           <div className="max-w-2xl text-white">
@@ -226,13 +230,13 @@ function HomePage() {
                 <MapPin size={18} className="text-rose" /> Near Artane Roundabout
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-rose">🏦</span> Beside AIB Bank
+                <Building2 size={18} className="text-rose" /> Beside AIB Bank
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-rose">🪒</span> Upstairs from Abbas Turkish Barber
+                <Scissors size={18} className="text-rose" /> Upstairs from Abbas Turkish Barber
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-rose">📞</span>
+                <Phone size={18} className="text-rose" />
                 <a href="tel:+353899508863" className="hover:text-ink">
                   (089) 950 8863
                 </a>

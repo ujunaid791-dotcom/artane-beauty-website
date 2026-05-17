@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CTAButton } from "@/components/CTAButton";
 import { SectionReveal } from "@/components/SectionReveal";
 import { useBooking } from "@/lib/BookingContext";
+import { Gem, Heart, CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -24,17 +25,17 @@ export const Route = createFileRoute("/about")({
 
 const values = [
   {
-    icon: "💎",
+    icon: <Gem className="text-gold" size={36} />,
     title: "Expert Craftsmanship",
     desc: "Highly trained technicians delivering precise, long-lasting results every visit.",
   },
   {
-    icon: "🌸",
+    icon: <Heart className="text-gold" size={36} />,
     title: "Warm & Welcoming",
     desc: "A calm, beautiful space where you can switch off and feel completely cared for.",
   },
   {
-    icon: "✅",
+    icon: <CheckCircle2 className="text-gold" size={36} />,
     title: "Premium Products",
     desc: "We only use trusted, professional brands — never the cheapest shortcut.",
   },

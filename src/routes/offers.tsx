@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CTAButton } from "@/components/CTAButton";
 import { SectionReveal } from "@/components/SectionReveal";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin, Phone, CheckCircle2 } from "lucide-react";
 import { useBooking } from "@/lib/BookingContext";
 
 export const Route = createFileRoute("/offers")({
@@ -82,9 +82,9 @@ function OffersPage() {
           <SectionReveal delay={120}>
             <div className="mt-10 rounded-[28px] bg-card shadow-card px-8 py-7">
               <p className="text-gold uppercase tracking-luxe text-xs">Salon Policy</p>
-              <p className="mt-3 text-ink text-base md:text-lg">
-                <span className="text-rose font-medium">✅ Shellac Removal:</span> No charge when
-                booked together with a new Shellac treatment.
+              <p className="mt-3 text-ink text-base md:text-lg flex items-center justify-center gap-2">
+                <CheckCircle2 size={20} className="text-rose shrink-0" />
+                <span><span className="text-rose font-medium">Shellac Removal:</span> No charge when booked together with a new Shellac treatment.</span>
               </p>
             </div>
           </SectionReveal>
