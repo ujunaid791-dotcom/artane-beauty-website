@@ -116,7 +116,7 @@ export function BookingModal() {
 Please confirm this appointment.`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/923009276042?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/353858168625?text=${encodedMessage}`;
 
     const emailSubject = encodeURIComponent(`Appointment Request - ${values.name}`);
     const emailBody = encodeURIComponent(
