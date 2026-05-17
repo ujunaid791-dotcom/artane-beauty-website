@@ -32,10 +32,10 @@ export function SectionReveal({
     return () => obs.disconnect();
   }, []);
 
-  const Comp = Tag as any;
+  const Comp = Tag as React.ElementType;
   return (
     <Comp
-      ref={ref as any}
+      ref={ref}
       className={`reveal ${visible ? "is-visible" : ""} ${className}`}
       style={{ animationDelay: visible ? `${delay}ms` : undefined }}
     >
