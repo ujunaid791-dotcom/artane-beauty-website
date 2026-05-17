@@ -5,7 +5,7 @@ type Props = {
   to?: string;
   href?: string;
   onClick?: () => void;
-  variant?: "primary" | "outline" | "rose" | "ink-rose";
+  variant?: "primary" | "outline" | "outline-ink" | "rose" | "ink-rose";
   children: ReactNode;
   className?: string;
 };
@@ -16,6 +16,7 @@ const base =
 const variants: Record<NonNullable<Props["variant"]>, string> = {
   primary: "bg-ink text-white hover:bg-rose hover:text-ink",
   outline: "border-2 border-white text-white hover:bg-white hover:text-ink",
+  "outline-ink": "border-2 border-ink text-ink hover:bg-ink hover:text-white",
   rose: "bg-rose text-ink hover:bg-ink hover:text-white",
   "ink-rose": "bg-ink text-white border border-white/10 hover:bg-rose hover:text-ink",
 };

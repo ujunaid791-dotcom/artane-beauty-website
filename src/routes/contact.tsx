@@ -87,7 +87,7 @@ function ContactPage() {
               </CTAButton>
               <CTAButton
                 href="tel:+353899508863"
-                variant="outline"
+                variant="outline-ink"
               >
                 Contact Us
               </CTAButton>

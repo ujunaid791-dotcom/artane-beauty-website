@@ -97,15 +97,14 @@ export function Navbar() {
           </button>
         </div>
 
-        {/* Center: Logo */}
         <Link
           to="/"
-          className="flex items-center justify-center"
+          className="flex items-center justify-center bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-2xl shadow-[0_4px_25px_rgba(0,0,0,0.2)] border border-white/50 transition-all hover:bg-white hover:scale-105"
         >
           <img
             src="/logo.png"
             alt="Artane Nails & Beauty Lounge Logo"
-            className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-105"
+            className="h-14 md:h-20 w-auto object-contain"
           />
         </Link>
 
