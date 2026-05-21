@@ -105,7 +105,7 @@ function HomePage() {
             <span className="inline-flex items-center gap-2 mt-4 bg-rose/90 text-ink text-xs md:text-sm font-semibold uppercase tracking-wide rounded-full px-5 py-2 animate-pulse">
               ✨ BIAB French Tip — €35 · Ends May 24th
             </span>
-            <h1 className="font-display mt-6 text-5xl md:text-7xl leading-[1.05] text-shadow-premium">
+            <h1 className="font-display mt-6 text-4xl md:text-7xl leading-[1.05] text-shadow-premium">
               Enhance Your Beauty,
               <br />
               Feel Your Best.
@@ -138,12 +138,12 @@ function HomePage() {
             <img
               src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=1200&q=80"
               alt="Elegant beauty salon interior"
-              className="rounded-2xl object-cover w-full aspect-[4/5] shadow-card"
+              className="rounded-2xl md:rounded-3xl object-cover w-full aspect-[4/5] shadow-card"
             />
           </SectionReveal>
           <SectionReveal delay={120}>
             <p className="text-gold uppercase tracking-luxe text-xs">Our Story</p>
-            <h2 className="font-display text-4xl md:text-5xl mt-4 leading-tight">
+            <h2 className="font-display text-3xl md:text-5xl mt-4 leading-tight">
               More Than a Salon.
               <br />A Place You&apos;ll Love.
             </h2>
@@ -168,7 +168,7 @@ function HomePage() {
         <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-10">
           <SectionReveal className="text-center max-w-2xl mx-auto">
             <p className="text-gold uppercase tracking-luxe text-xs">What We Offer</p>
-            <h2 className="font-display text-4xl md:text-5xl mt-4">A Full Menu of Beauty</h2>
+            <h2 className="font-display text-3xl md:text-5xl mt-4">A Full Menu of Beauty</h2>
             <p className="mt-5 text-muted-foreground text-lg">
               Professional services for nails, brows, lashes, skin &amp; more.
             </p>
@@ -177,7 +177,7 @@ function HomePage() {
           <div className="grid mt-16 gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
               <SectionReveal key={s.title} delay={i * 80}>
-                <div className="bg-card rounded-[28px] p-7 md:p-9 shadow-card hover:-translate-y-2 hover:shadow-card-hover transition-all duration-400 h-full">
+                <div className="bg-card rounded-2xl md:rounded-[28px] p-7 md:p-9 shadow-card hover:-translate-y-2 hover:shadow-card-hover transition-all duration-400 h-full">
                   <div className="text-4xl">{s.icon}</div>
                   <h3 className="font-display text-2xl mt-5">{s.title}</h3>
                   <p className="text-muted-foreground mt-3">{s.desc}</p>
@@ -201,10 +201,10 @@ function HomePage() {
       <section className="bg-beige py-16 md:py-32">
         <div className="max-w-4xl mx-auto px-5 md:px-6 text-center">
           <SectionReveal>
-            <div className="bg-card rounded-[36px] shadow-card px-6 md:px-14 py-10 md:py-14">
-              <span className="text-5xl">🎓</span>
+            <div className="bg-card rounded-3xl md:rounded-[36px] shadow-card px-6 md:px-14 py-10 md:py-14">
+              <span className="text-4xl md:text-5xl">🎓</span>
               <p className="text-gold uppercase tracking-luxe text-xs mt-6">For Students</p>
-              <h2 className="font-display text-4xl md:text-5xl mt-4">Student Discount</h2>
+              <h2 className="font-display text-3xl md:text-5xl mt-4">Student Discount</h2>
               <p className="mt-6 text-muted-foreground text-lg max-w-lg mx-auto">
                 Keep your nails looking flawless on a student budget. Enjoy a{" "}
                 <span className="text-rose font-semibold">10% discount</span> on our services.
@@ -227,12 +227,12 @@ function HomePage() {
         <div className="max-w-4xl mx-auto px-5 md:px-6 text-center">
           <SectionReveal>
             <p className="text-gold uppercase tracking-luxe text-xs">Special Offer</p>
-            <h2 className="font-display text-4xl md:text-6xl mt-6 text-white">
+            <h2 className="font-display text-3xl md:text-6xl mt-6 text-white">
               BIAB with French Tip
             </h2>
             <div className="mt-6 flex items-center justify-center gap-4">
-              <span className="text-3xl text-white/50 line-through">€50</span>
-              <span className="font-display text-6xl md:text-7xl text-rose">€35</span>
+              <span className="text-2xl md:text-3xl text-white/50 line-through">€50</span>
+              <span className="font-display text-5xl md:text-7xl text-rose">€35</span>
             </div>
             <p className="mt-6 text-white/75 text-lg">
               Offer valid until 24 May 2026. Don&apos;t miss it.
@@ -251,7 +251,7 @@ function HomePage() {
         <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <SectionReveal>
             <p className="text-gold uppercase tracking-luxe text-xs">Visit Us</p>
-            <h2 className="font-display text-4xl md:text-5xl mt-4">Find Us in Artane</h2>
+            <h2 className="font-display text-3xl md:text-5xl mt-4">Find Us in Artane</h2>
             <div className="mt-8 space-y-2 text-ink text-lg">
               <p className="font-medium">58 Saint Brigid&apos;s Road (Upstairs Turkish Barber)</p>
               <p>Artane, Dublin 5</p>
@@ -285,7 +285,7 @@ function HomePage() {
             </div>
           </SectionReveal>
           <SectionReveal delay={120}>
-            <div className="rounded-2xl overflow-hidden shadow-card aspect-[4/5] md:aspect-square">
+            <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-card aspect-[4/5] md:aspect-square">
               <iframe
                 title="Artane Nails & Beauty Lounge map"
                 src="https://www.google.com/maps?q=58+Saint+Brigid%27s+Road,+Artane,+Dublin+5&output=embed"
@@ -302,13 +302,13 @@ function HomePage() {
         <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-10">
           <SectionReveal className="text-center max-w-2xl mx-auto">
             <p className="text-gold uppercase tracking-luxe text-xs">Loved by Locals</p>
-            <h2 className="font-display text-4xl md:text-5xl mt-4">What Our Clients Say</h2>
+            <h2 className="font-display text-3xl md:text-5xl mt-4">What Our Clients Say</h2>
           </SectionReveal>
 
           <div className="grid mt-12 md:mt-16 gap-6 md:gap-8 md:grid-cols-3">
             {testimonials.map((t, i) => (
               <SectionReveal key={t.name} delay={i * 100}>
-                <div className="bg-card rounded-[28px] p-7 md:p-8 shadow-card h-full flex flex-col">
+                <div className="bg-card rounded-2xl md:rounded-[28px] p-7 md:p-8 shadow-card h-full flex flex-col">
                   <div className="flex gap-1 text-gold">
                     {Array.from({ length: 5 }).map((_, j) => (
                       <Star key={j} size={16} fill="currentColor" stroke="none" />

@@ -11,7 +11,7 @@ type Props = {
 };
 
 const base =
-  "inline-flex items-center justify-center rounded-full px-8 py-4 text-[15px] font-medium tracking-wide cursor-pointer btn-premium";
+  "inline-flex items-center justify-center rounded-full px-6 md:px-8 py-3.5 md:py-4 text-[14px] md:text-[15px] font-medium tracking-wide cursor-pointer btn-premium";
 
 const variants: Record<NonNullable<Props["variant"]>, string> = {
   primary: "bg-ink text-white hover:bg-rose hover:text-ink btn-premium-primary",
