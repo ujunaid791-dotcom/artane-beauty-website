@@ -12,7 +12,7 @@ const links = [
 export function Footer() {
   return (
     <footer className="bg-ink text-white/80">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid gap-10 md:grid-cols-3">
+      <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-10 py-12 md:py-16 grid gap-8 md:gap-10 md:grid-cols-3">
         <div>
           <div className="font-display text-2xl text-white" style={{ letterSpacing: "0.04em" }}>
             Artane <span className="text-gold">·</span> Beauty Lounge

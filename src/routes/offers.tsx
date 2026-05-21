@@ -41,10 +41,10 @@ function OffersPage() {
       </section>
 
       {/* OFFER CARD */}
-      <section className="bg-beige py-20 md:py-28">
-        <div className="max-w-3xl mx-auto px-6">
+      <section className="bg-beige py-16 md:py-28">
+        <div className="max-w-3xl mx-auto px-5 md:px-6">
           <SectionReveal>
-            <div className="bg-card rounded-[36px] shadow-card-hover px-8 md:px-14 py-14 text-center">
+            <div className="bg-card rounded-[36px] shadow-card-hover px-6 md:px-14 py-10 md:py-14 text-center">
               <span className="inline-block bg-rose text-ink text-xs uppercase tracking-luxe rounded-full px-5 py-2 font-medium">
                 Limited Time
               </span>
@@ -87,8 +87,8 @@ function OffersPage() {
       </section>
 
       {/* LOCATION REMINDER */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="py-16 md:py-28">
+        <div className="max-w-3xl mx-auto px-5 md:px-6 text-center">
           <SectionReveal>
             <p className="text-gold uppercase tracking-luxe text-xs">Where to Find Us</p>
             <h2 className="font-display text-3xl md:text-4xl mt-4">

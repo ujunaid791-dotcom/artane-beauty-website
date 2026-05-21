@@ -97,7 +97,7 @@ function HomePage() {
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/55" />
-        <div className="relative z-10 h-full max-w-7xl mx-auto px-6 lg:px-10 flex items-center">
+        <div className="relative z-10 h-full max-w-7xl mx-auto px-5 md:px-6 lg:px-10 flex items-center">
           <div className="max-w-2xl text-white">
             <p className="text-gold uppercase tracking-luxe text-xs md:text-sm font-semibold text-shadow-gold">
               Dublin 5&apos;s Premier Beauty Destination
@@ -132,8 +132,8 @@ function HomePage() {
       <GrandOpeningBanner />
 
       {/* ABOUT PREVIEW */}
-      <section className="bg-beige py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+      <section className="bg-beige py-16 md:py-32">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-10 grid md:grid-cols-2 gap-8 md:gap-20 items-center">
           <SectionReveal>
             <img
               src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=1200&q=80"
@@ -164,8 +164,8 @@ function HomePage() {
       </section>
 
       {/* SERVICES PREVIEW */}
-      <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <section className="py-16 md:py-32">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-10">
           <SectionReveal className="text-center max-w-2xl mx-auto">
             <p className="text-gold uppercase tracking-luxe text-xs">What We Offer</p>
             <h2 className="font-display text-4xl md:text-5xl mt-4">A Full Menu of Beauty</h2>
@@ -177,7 +177,7 @@ function HomePage() {
           <div className="grid mt-16 gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
               <SectionReveal key={s.title} delay={i * 80}>
-                <div className="bg-card rounded-[28px] p-9 shadow-card hover:-translate-y-2 hover:shadow-card-hover transition-all duration-400 h-full">
+                <div className="bg-card rounded-[28px] p-7 md:p-9 shadow-card hover:-translate-y-2 hover:shadow-card-hover transition-all duration-400 h-full">
                   <div className="text-4xl">{s.icon}</div>
                   <h3 className="font-display text-2xl mt-5">{s.title}</h3>
                   <p className="text-muted-foreground mt-3">{s.desc}</p>
@@ -198,10 +198,10 @@ function HomePage() {
       </section>
 
       {/* STUDENT DISCOUNT */}
-      <section className="bg-beige py-24 md:py-32">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="bg-beige py-16 md:py-32">
+        <div className="max-w-4xl mx-auto px-5 md:px-6 text-center">
           <SectionReveal>
-            <div className="bg-card rounded-[36px] shadow-card px-8 md:px-14 py-14">
+            <div className="bg-card rounded-[36px] shadow-card px-6 md:px-14 py-10 md:py-14">
               <span className="text-5xl">🎓</span>
               <p className="text-gold uppercase tracking-luxe text-xs mt-6">For Students</p>
               <h2 className="font-display text-4xl md:text-5xl mt-4">Student Discount</h2>
@@ -223,8 +223,8 @@ function HomePage() {
       </section>
 
       {/* OFFER HIGHLIGHT */}
-      <section className="bg-ink text-white py-24 md:py-32">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="bg-ink text-white py-16 md:py-32">
+        <div className="max-w-4xl mx-auto px-5 md:px-6 text-center">
           <SectionReveal>
             <p className="text-gold uppercase tracking-luxe text-xs">Special Offer</p>
             <h2 className="font-display text-4xl md:text-6xl mt-6 text-white">
@@ -247,8 +247,8 @@ function HomePage() {
       </section>
 
       {/* LOCATION */}
-      <section className="bg-beige py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-12 items-center">
+      <section className="bg-beige py-16 md:py-32">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <SectionReveal>
             <p className="text-gold uppercase tracking-luxe text-xs">Visit Us</p>
             <h2 className="font-display text-4xl md:text-5xl mt-4">Find Us in Artane</h2>
@@ -298,17 +298,17 @@ function HomePage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <section className="py-16 md:py-32">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-10">
           <SectionReveal className="text-center max-w-2xl mx-auto">
             <p className="text-gold uppercase tracking-luxe text-xs">Loved by Locals</p>
             <h2 className="font-display text-4xl md:text-5xl mt-4">What Our Clients Say</h2>
           </SectionReveal>
 
-          <div className="grid mt-16 gap-8 md:grid-cols-3">
+          <div className="grid mt-12 md:mt-16 gap-6 md:gap-8 md:grid-cols-3">
             {testimonials.map((t, i) => (
               <SectionReveal key={t.name} delay={i * 100}>
-                <div className="bg-card rounded-[28px] p-8 shadow-card h-full flex flex-col">
+                <div className="bg-card rounded-[28px] p-7 md:p-8 shadow-card h-full flex flex-col">
                   <div className="flex gap-1 text-gold">
                     {Array.from({ length: 5 }).map((_, j) => (
                       <Star key={j} size={16} fill="currentColor" stroke="none" />

@@ -57,8 +57,8 @@ function ServicesPage() {
       <GrandOpeningBanner />
 
       {/* SERVICES ACCORDION */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-16 md:py-28">
+        <div className="max-w-4xl mx-auto px-5 md:px-6">
           <Accordion type="multiple" defaultValue={["manicure"]} className="space-y-5">
             {categories.map((cat) => (
               <SectionReveal key={cat.id}>
@@ -66,7 +66,7 @@ function ServicesPage() {
                   value={cat.id}
                   className="bg-card rounded-[28px] shadow-card border-0 overflow-hidden"
                 >
-                  <AccordionTrigger className="px-8 py-7 hover:no-underline group">
+                  <AccordionTrigger className="px-6 md:px-8 py-6 md:py-7 hover:no-underline group">
                     <div className="text-left">
                       <h3 className="font-display text-2xl md:text-3xl text-ink">{cat.title}</h3>
                       {cat.subtitle && (
@@ -74,7 +74,7 @@ function ServicesPage() {
                       )}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-8 pb-8">
+                  <AccordionContent className="px-6 md:px-8 pb-6 md:pb-8">
                     <div className="space-y-8">
                       {cat.groups.map((g, gi) => (
                         <div key={gi}>
@@ -105,13 +105,13 @@ function ServicesPage() {
           {/* POLICY */}
           <SectionReveal>
             <div className="mt-12 grid gap-5 md:grid-cols-2">
-              <div className="rounded-[28px] bg-rose/10 border border-rose/40 px-8 py-7 text-center shadow-sm">
+              <div className="rounded-[28px] bg-rose/10 border border-rose/40 px-6 md:px-8 py-6 md:py-7 text-center shadow-sm">
                 <p className="text-ink text-base md:text-lg flex items-center justify-center gap-2">
                   <span className="text-rose text-lg">🎓</span>
                   <span><span className="text-rose font-semibold">Special Offer:</span> Students get a <span className="font-semibold text-rose">10% discount</span> on all services!</span>
                 </p>
               </div>
-              <div className="rounded-[28px] bg-beige border border-rose/30 px-8 py-7 text-center">
+              <div className="rounded-[28px] bg-beige border border-rose/30 px-6 md:px-8 py-6 md:py-7 text-center">
                 <p className="text-ink text-base md:text-lg flex items-center justify-center gap-2">
                   <CheckCircle2 size={20} className="text-rose shrink-0" />
                   <span><span className="text-rose font-medium">Policy:</span> No charge for Shellac removal when booking a new Shellac service.</span>
@@ -123,7 +123,7 @@ function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-ink text-white py-20 md:py-28 text-center">
+      <section className="bg-ink text-white py-16 md:py-28 text-center">
         <SectionReveal>
           <p className="text-gold uppercase tracking-luxe text-xs">Ready to book?</p>
           <h2 className="font-display text-4xl md:text-5xl mt-5 text-white">

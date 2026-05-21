@@ -38,8 +38,8 @@ function ContactPage() {
       </section>
 
       {/* CONTACT */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+      <section className="py-16 md:py-28">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-10 grid md:grid-cols-2 gap-8 md:gap-16 items-start">
           <SectionReveal>
             <p className="text-gold uppercase tracking-luxe text-xs">Get in Touch</p>
             <h2 className="font-display text-4xl md:text-5xl mt-4">Say Hello</h2>

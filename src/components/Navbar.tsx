@@ -43,7 +43,7 @@ export function Navbar() {
 
   return (
     <header className="sticky-header-premium">
-      <nav className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-5 md:px-6 lg:px-10 h-20 flex items-center justify-between">
         {/* Left: Dropdown Menu */}
         <div className="flex-1 flex justify-start items-center">
           <div
@@ -100,7 +100,7 @@ export function Navbar() {
           <img
             src="/logo.png"
             alt="Artane Nails & Beauty Lounge Logo"
-            className="h-16 md:h-28 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition-transform hover:scale-105"
+            className="h-14 md:h-28 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition-transform hover:scale-105"
           />
         </Link>
 
@@ -117,7 +117,7 @@ export function Navbar() {
 
       {/* Mobile menu overlay */}
       {open && (
-        <div className="md:hidden bg-[#fbf9f6] border-t border-border px-6 py-6 flex flex-col gap-5 animate-in fade-in slide-in-from-top duration-300">
+        <div className="md:hidden bg-[#fbf9f6] border-t border-border px-5 md:px-6 py-6 flex flex-col gap-5 animate-in fade-in slide-in-from-top duration-300">
           {links.map((l) => (
             <Link
               key={l.to}
