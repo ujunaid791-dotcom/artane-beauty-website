@@ -48,8 +48,9 @@ function ContactPage() {
               <li className="flex gap-4">
                 <MapPin className="text-rose mt-1" size={22} />
                 <div>
-                  <p className="font-medium">58 Saint Brigid&apos;s Road</p>
+                  <p className="font-medium">58 Saint Brigid&apos;s Road (Upstairs Turkish Barber)</p>
                   <p className="text-muted-foreground">Artane, Dublin 5, D05 H9W2</p>
+                  <p className="text-xs text-muted-foreground italic mt-1">Formerly Roxy Studio</p>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -64,9 +65,9 @@ function ContactPage() {
               <li className="flex gap-4">
                 <Clock className="text-rose mt-1" size={22} />
                 <div>
-                  <p className="font-medium">Opening Friday 15 May 2026</p>
+                  <p className="font-medium">Now Open</p>
                   <p className="text-muted-foreground">
-                    Grand Opening weekend: Fri – Sun, 25% off all services.
+                    BIAB with French Tip — <s className="opacity-60">€50</s> €35. Valid until 24 May 2026.
                   </p>
                 </div>
               </li>

@@ -12,12 +12,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Premium nail care, lashes, brows, facials & waxing in Artane, Dublin 5. Grand opening 15 May 2026 — 25% off all services for 3 days only.",
+          "Premium nail care, lashes, brows, facials & waxing in Artane, Dublin 5. BIAB with French Tip — €35 (was €50). Valid until 24 May 2026.",
       },
       { property: "og:title", content: "Artane Nails & Beauty Lounge" },
       {
         property: "og:description",
-        content: "Enhance your beauty, feel your best. Grand opening 15 May 2026.",
+        content: "Enhance your beauty, feel your best. BIAB French Tip €35 — valid until 24 May 2026.",
       },
       {
         property: "og:image",
@@ -95,23 +95,27 @@ function HomePage() {
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/55" />
         <div className="relative z-10 h-full max-w-7xl mx-auto px-6 lg:px-10 flex items-center">
           <div className="max-w-2xl text-white">
-            <p className="text-gold uppercase tracking-luxe text-xs md:text-sm">
+            <p className="text-gold uppercase tracking-luxe text-xs md:text-sm font-semibold text-shadow-gold">
               Dublin 5&apos;s Premier Beauty Destination
             </p>
-            <h1 className="font-display mt-6 text-5xl md:text-7xl leading-[1.05]">
+            <span className="inline-flex items-center gap-2 mt-4 bg-rose/90 text-ink text-xs md:text-sm font-semibold uppercase tracking-wide rounded-full px-5 py-2 animate-pulse">
+              ✨ BIAB French Tip — €35 · Ends May 24th
+            </span>
+            <h1 className="font-display mt-6 text-5xl md:text-7xl leading-[1.05] text-shadow-premium">
               Enhance Your Beauty,
               <br />
               Feel Your Best.
             </h1>
-            <p className="mt-6 text-base md:text-xl text-white/85 max-w-xl">
+            <p className="mt-6 text-base md:text-xl text-white/90 max-w-xl text-shadow-premium">
               Expert nail care, beauty treatments &amp; a relaxing luxury atmosphere — right in
               Artane.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <CTAButton onClick={openModal} variant="primary">
+              <CTAButton onClick={openModal} variant="ink-rose">
                 Book Appointment
               </CTAButton>
               <CTAButton to="/services" variant="outline">
@@ -193,17 +197,45 @@ function HomePage() {
         </div>
       </section>
 
+      {/* STUDENT DISCOUNT */}
+      <section className="bg-beige py-24 md:py-32">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <SectionReveal>
+            <div className="bg-card rounded-[36px] shadow-card px-8 md:px-14 py-14">
+              <span className="text-5xl">🎓</span>
+              <p className="text-gold uppercase tracking-luxe text-xs mt-6">For Students</p>
+              <h2 className="font-display text-4xl md:text-5xl mt-4">Student Discount</h2>
+              <p className="mt-6 text-muted-foreground text-lg max-w-lg mx-auto">
+                Keep your nails looking flawless on a student budget. Enjoy a{" "}
+                <span className="text-rose font-semibold">10% discount</span> on our services.
+              </p>
+              <p className="mt-4 text-sm text-muted-foreground italic">
+                Valid student ID required at appointment.
+              </p>
+              <div className="mt-10">
+                <CTAButton onClick={openModal} variant="primary">
+                  Book with Student Discount
+                </CTAButton>
+              </div>
+            </div>
+          </SectionReveal>
+        </div>
+      </section>
+
       {/* OFFER HIGHLIGHT */}
       <section className="bg-ink text-white py-24 md:py-32">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <SectionReveal>
-            <p className="text-gold uppercase tracking-luxe text-xs">Grand Opening Offer</p>
+            <p className="text-gold uppercase tracking-luxe text-xs">Special Offer</p>
             <h2 className="font-display text-4xl md:text-6xl mt-6 text-white">
-              25% Off Every Service
+              BIAB with French Tip
             </h2>
+            <div className="mt-6 flex items-center justify-center gap-4">
+              <span className="text-3xl text-white/50 line-through">€50</span>
+              <span className="font-display text-6xl md:text-7xl text-rose">€35</span>
+            </div>
             <p className="mt-6 text-white/75 text-lg">
-              Valid Friday 15<sup>th</sup>, Saturday 16<sup>th</sup> &amp; Sunday 17<sup>th</sup>{" "}
-              May 2026. Don&apos;t miss it.
+              Offer valid until 24 May 2026. Don&apos;t miss it.
             </p>
             <div className="mt-10">
               <CTAButton onClick={openModal} variant="rose">
@@ -221,9 +253,10 @@ function HomePage() {
             <p className="text-gold uppercase tracking-luxe text-xs">Visit Us</p>
             <h2 className="font-display text-4xl md:text-5xl mt-4">Find Us in Artane</h2>
             <div className="mt-8 space-y-2 text-ink text-lg">
-              <p className="font-medium">58 Saint Brigid&apos;s Road</p>
+              <p className="font-medium">58 Saint Brigid&apos;s Road (Upstairs Turkish Barber)</p>
               <p>Artane, Dublin 5</p>
               <p>D05 H9W2</p>
+              <p className="text-sm text-muted-foreground italic mt-1">Formerly Roxy Studio</p>
             </div>
             <ul className="mt-8 space-y-3 text-muted-foreground">
               <li className="flex items-center gap-3">

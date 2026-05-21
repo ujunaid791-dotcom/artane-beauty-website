@@ -104,11 +104,19 @@ function ServicesPage() {
 
           {/* POLICY */}
           <SectionReveal>
-            <div className="mt-12 rounded-[28px] bg-beige border border-rose/30 px-8 py-7 text-center">
-              <p className="text-ink text-base md:text-lg flex items-center justify-center gap-2">
-                <CheckCircle2 size={20} className="text-rose shrink-0" />
-                <span><span className="text-rose font-medium">Policy:</span> No charge for Shellac removal when booking a new Shellac service.</span>
-              </p>
+            <div className="mt-12 grid gap-5 md:grid-cols-2">
+              <div className="rounded-[28px] bg-rose/10 border border-rose/40 px-8 py-7 text-center shadow-sm">
+                <p className="text-ink text-base md:text-lg flex items-center justify-center gap-2">
+                  <span className="text-rose text-lg">🎓</span>
+                  <span><span className="text-rose font-semibold">Special Offer:</span> Students get a <span className="font-semibold text-rose">10% discount</span> on all services!</span>
+                </p>
+              </div>
+              <div className="rounded-[28px] bg-beige border border-rose/30 px-8 py-7 text-center">
+                <p className="text-ink text-base md:text-lg flex items-center justify-center gap-2">
+                  <CheckCircle2 size={20} className="text-rose shrink-0" />
+                  <span><span className="text-rose font-medium">Policy:</span> No charge for Shellac removal when booking a new Shellac service.</span>
+                </p>
+              </div>
             </div>
           </SectionReveal>
         </div>

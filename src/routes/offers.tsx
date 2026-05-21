@@ -7,16 +7,16 @@ import { useBooking } from "@/lib/BookingContext";
 export const Route = createFileRoute("/offers")({
   head: () => ({
     meta: [
-      { title: "Grand Opening — 25% Off | Artane Nails & Beauty Lounge" },
+      { title: "BIAB French Tip €35 — Special Offer | Artane Nails & Beauty Lounge" },
       {
         name: "description",
         content:
-          "Celebrate our Grand Opening: 25% off all services on Friday 15, Saturday 16 and Sunday 17 May 2026 at Artane Nails & Beauty Lounge, Dublin 5.",
+          "BIAB with French Tip for just €35 (was €50). Offer valid until 24 May 2026 at Artane Nails & Beauty Lounge, Dublin 5.",
       },
-      { property: "og:title", content: "Grand Opening — 25% Off All Services" },
+      { property: "og:title", content: "BIAB French Tip — €35 Special Offer" },
       {
         property: "og:description",
-        content: "3 days only — Fri, Sat & Sun 15–17 May 2026 in Artane, Dublin 5.",
+        content: "BIAB with French Tip — was €50, now €35. Valid until 24 May 2026.",
       },
     ],
   }),
@@ -33,9 +33,9 @@ function OffersPage() {
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top,_var(--gold),_transparent_60%)]" />
         <div className="relative max-w-3xl mx-auto px-6">
           <p className="text-gold uppercase tracking-luxe text-xs">Special Offer</p>
-          <h1 className="font-display text-5xl md:text-7xl mt-6 text-white">Grand Opening Offer</h1>
+          <h1 className="font-display text-5xl md:text-7xl mt-6 text-white">Special Offer</h1>
           <p className="mt-5 text-white/75 text-lg">
-            We&apos;re celebrating our launch — and we want you to be there.
+            A stunning deal to celebrate our new chapter — don&apos;t miss out.
           </p>
         </div>
       </section>
@@ -49,26 +49,21 @@ function OffersPage() {
                 Limited Time
               </span>
               <h2 className="font-display text-5xl md:text-6xl mt-8 text-ink">
-                25% Off All Services
+                BIAB with French Tip
               </h2>
-              <p className="mt-5 text-muted-foreground text-lg max-w-md mx-auto">
-                Celebrating our Grand Opening on Friday 15<sup>th</sup> May 2026.
-              </p>
-
-              <div className="mt-10 inline-flex flex-wrap justify-center gap-3 text-sm">
-                {["Fri 15 May", "Sat 16 May", "Sun 17 May"].map((d) => (
-                  <span
-                    key={d}
-                    className="rounded-full border border-ink/15 px-5 py-2 text-ink font-medium bg-ivory"
-                  >
-                    {d}
-                  </span>
-                ))}
+              <div className="mt-6 flex items-center justify-center gap-4">
+                <span className="text-3xl text-muted-foreground line-through opacity-60">€50</span>
+                <span className="font-display text-6xl md:text-7xl text-rose">€35</span>
               </div>
-
-              <p className="mt-6 text-xs text-muted-foreground uppercase tracking-luxe">
-                3 days only
+              <p className="mt-5 text-muted-foreground text-lg max-w-md mx-auto">
+                Get our signature BIAB with a gorgeous French Tip at a special introductory price.
               </p>
+
+              <div className="mt-8">
+                <span className="rounded-full border border-rose/30 bg-rose/10 px-6 py-2.5 text-ink text-sm font-medium">
+                  Offer valid until 24 May 2026
+                </span>
+              </div>
 
               <div className="mt-10">
                 <CTAButton onClick={openModal} variant="primary">
@@ -97,7 +92,7 @@ function OffersPage() {
           <SectionReveal>
             <p className="text-gold uppercase tracking-luxe text-xs">Where to Find Us</p>
             <h2 className="font-display text-3xl md:text-4xl mt-4">
-              58 Saint Brigid&apos;s Road, Artane
+              58 Saint Brigid&apos;s Road (Upstairs Turkish Barber), Artane
             </h2>
             <div className="mt-8 flex flex-wrap justify-center gap-6 text-muted-foreground">
               <span className="inline-flex items-center gap-2">

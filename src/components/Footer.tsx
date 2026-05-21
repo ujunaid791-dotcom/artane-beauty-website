@@ -17,6 +17,7 @@ export function Footer() {
           <div className="font-display text-2xl text-white" style={{ letterSpacing: "0.04em" }}>
             Artane <span className="text-gold">·</span> Beauty Lounge
           </div>
+          <p className="mt-1 text-xs text-white/40 italic">Formerly Roxy Studio</p>
           <p className="mt-4 text-sm text-white/60 max-w-xs">
             Enhance Your Beauty, Feel Your Best. A premium nail &amp; beauty destination in Artane,
             Dublin 5.
@@ -39,7 +40,7 @@ export function Footer() {
         <div className="md:text-right">
           <div className="text-xs uppercase tracking-luxe text-gold">Visit</div>
           <p className="mt-3 text-sm text-white/80 leading-relaxed">
-            58 Saint Brigid&apos;s Road
+            58 Saint Brigid&apos;s Road (Upstairs Turkish Barber)
             <br />
             Artane, Dublin 5, D05 H9W2
           </p>

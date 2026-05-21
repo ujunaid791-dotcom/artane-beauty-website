@@ -35,18 +35,14 @@ export function Navbar() {
     return () => document.removeEventListener("mousedown", onClick);
   }, []);
 
-  const textColor = scrolled || open ? "text-ink" : "text-white";
-  const textColorHover = scrolled || open ? "hover:text-rose" : "hover:text-white";
+  const textColor = "text-ink";
+  const textColorHover = "hover:text-rose";
 
   const handleMenuEnter = () => setDropdownOpen(true);
   const handleMenuLeave = () => setDropdownOpen(false);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || open ? "bg-ivory/95 backdrop-blur border-b border-border" : "bg-transparent"
-      }`}
-    >
+    <header className="sticky-header-premium">
       <nav className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
         {/* Left: Dropdown Menu */}
         <div className="flex-1 flex justify-start items-center">
@@ -67,7 +63,7 @@ export function Navbar() {
             </button>
 
             {dropdownOpen && (
-              <div className="absolute left-0 top-full pt-3 w-48">
+              <div className="absolute left-0 top-full pt-3 w-48 animate-in fade-in slide-in-from-top-2 duration-200">
                 <div className="rounded-xl border border-border bg-white shadow-card py-2 overflow-hidden">
                   {links.map((l) => (
                     <Link
@@ -75,9 +71,9 @@ export function Navbar() {
                       to={l.to}
                       onClick={() => setDropdownOpen(false)}
                       activeOptions={{ exact: l.to === "/" }}
-                      className="block px-5 py-2.5 text-[14px] font-medium text-ink hover:bg-beige transition-colors"
+                      className="block px-5 py-2.5 text-[14px] font-medium text-ink hover:text-rose hover:bg-beige/40 transition-colors"
                       activeProps={{
-                        className: "block px-5 py-2.5 text-[14px] font-medium !text-rose bg-beige/50",
+                        className: "block px-5 py-2.5 text-[14px] font-medium !text-rose bg-beige/60",
                       }}
                     >
                       {l.label}
@@ -90,7 +86,7 @@ export function Navbar() {
 
           <button
             aria-label="Toggle menu"
-            className={`md:hidden p-2 ${textColor}`}
+            className={`md:hidden p-2 ${textColor} ${textColorHover}`}
             onClick={() => setOpen((o) => !o)}
           >
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -104,7 +100,7 @@ export function Navbar() {
           <img
             src="/logo.png"
             alt="Artane Nails & Beauty Lounge Logo"
-            className="h-16 md:h-28 w-auto object-contain drop-shadow-[0_2px_12px_rgba(255,255,255,0.85)] transition-transform hover:scale-105"
+            className="h-16 md:h-28 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition-transform hover:scale-105"
           />
         </Link>
 
@@ -112,11 +108,7 @@ export function Navbar() {
         <div className="flex-1 flex justify-end items-center">
           <button
             onClick={() => openModal()}
-            className={`hidden md:inline-flex rounded-full border px-6 py-2.5 text-[13px] font-medium tracking-wide transition-all ${
-              scrolled || open
-                ? "border-ink text-ink hover:bg-ink hover:text-white"
-                : "border-white/60 text-white hover:bg-white hover:text-ink"
-            }`}
+            className="hidden md:inline-flex rounded-full bg-ink text-white hover:bg-rose hover:text-ink px-6 py-2.5 text-[13px] font-medium tracking-wide transition-all btn-premium btn-premium-primary"
           >
             Book Now
           </button>
@@ -125,14 +117,14 @@ export function Navbar() {
 
       {/* Mobile menu overlay */}
       {open && (
-        <div className="md:hidden bg-ivory border-t border-border px-6 py-6 flex flex-col gap-5">
+        <div className="md:hidden bg-[#fbf9f6] border-t border-border px-6 py-6 flex flex-col gap-5 animate-in fade-in slide-in-from-top duration-300">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               onClick={() => setOpen(false)}
               activeOptions={{ exact: l.to === "/" }}
-              className="text-base font-medium text-ink"
+              className="text-base font-medium text-ink hover:text-rose transition-colors"
               activeProps={{ className: "!text-rose" }}
             >
               {l.label}
@@ -143,7 +135,7 @@ export function Navbar() {
               setOpen(false);
               openModal();
             }}
-            className="rounded-full bg-ink text-white px-7 py-3 text-center text-[14px] font-medium"
+            className="rounded-full bg-ink text-white px-7 py-3 text-center text-[14px] font-medium transition-all btn-premium btn-premium-primary"
           >
             Book Now
           </button>
