@@ -12,12 +12,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Premium nail care, lashes, brows, facials & waxing in Artane, Dublin 5. BIAB with French Tip — €35 (was €50). Valid until 24 May 2026.",
+          "Premium nail care, lashes, brows, facials & waxing in Artane, Dublin 5. VIP Summer Beauty Package — Deluxe Pedicure + BIAB with French Tips for only €85. Save €25!",
       },
       { property: "og:title", content: "Artane Nails & Beauty Lounge" },
       {
         property: "og:description",
-        content: "Enhance your beauty, feel your best. BIAB French Tip €35 — valid until 24 May 2026.",
+        content: "Enhance your beauty, feel your best. VIP Summer Beauty Package €85 — Deluxe Pedicure + BIAB with French Tips. Save €25!",
       },
       {
         property: "og:image",
@@ -103,7 +103,7 @@ function HomePage() {
               Dublin 5&apos;s Premier Beauty Destination
             </p>
             <span className="inline-flex items-center gap-2 mt-4 bg-rose/90 text-ink text-xs md:text-sm font-semibold uppercase tracking-wide rounded-full px-5 py-2 animate-pulse">
-              ✨ BIAB French Tip — €35 · Ends May 24th
+              ✨ VIP Summer Package — €85 · Save €25
             </span>
             <h1 className="font-display mt-6 text-4xl md:text-7xl leading-[1.05] text-shadow-premium">
               Enhance Your Beauty,
@@ -228,15 +228,17 @@ function HomePage() {
           <SectionReveal>
             <p className="text-gold uppercase tracking-luxe text-xs">Special Offer</p>
             <h2 className="font-display text-3xl md:text-6xl mt-6 text-white">
-              BIAB with French Tip
+              VIP Summer Beauty Package
             </h2>
             <div className="mt-6 flex items-center justify-center gap-4">
-              <span className="text-2xl md:text-3xl text-white/50 line-through">€50</span>
-              <span className="font-display text-5xl md:text-7xl text-rose">€35</span>
+              <span className="text-2xl md:text-3xl text-white/50 line-through">€110</span>
+              <span className="font-display text-5xl md:text-7xl text-rose">€85</span>
             </div>
-            <p className="mt-6 text-white/75 text-lg">
-              Offer valid until 24 May 2026. Don&apos;t miss it.
+            <p className="mt-4 text-white/60 text-base uppercase tracking-widest font-medium">Save €25!</p>
+            <p className="mt-4 text-white/75 text-lg">
+              Deluxe Pedicure + BIAB with French Tips — complimentary tea/coffee included.
             </p>
+            <p className="mt-3 text-white/50 text-sm">Bring a friend &amp; both get 10% off your next visit!</p>
             <div className="mt-10">
               <CTAButton onClick={openModal} variant="rose">
                 Book Your Appointment

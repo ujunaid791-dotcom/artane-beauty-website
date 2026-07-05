@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Bickham Script Pro';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Bickham Script Pro'), url('https://fonts.cdnfonts.com/s/14191/Bickham Script Pro Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Bickham Script Pro';
+    font-style: italic;
+    font-weight: 600;
+    src: local('Bickham Script Pro'), url('https://fonts.cdnfonts.com/s/14191/Bickham Script Pro Semibold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Bickham Script Pro';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Bickham Script Pro'), url('https://fonts.cdnfonts.com/s/14191/Bickham Script Pro Bold.woff') format('woff');
+}
+
+

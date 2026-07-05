@@ -7,16 +7,16 @@ import { useBooking } from "@/lib/BookingContext";
 export const Route = createFileRoute("/offers")({
   head: () => ({
     meta: [
-      { title: "BIAB French Tip €35 — Special Offer | Artane Nails & Beauty Lounge" },
+      { title: "VIP Summer Beauty Package €85 — Special Offer | Artane Nails & Beauty Lounge" },
       {
         name: "description",
         content:
-          "BIAB with French Tip for just €35 (was €50). Offer valid until 24 May 2026 at Artane Nails & Beauty Lounge, Dublin 5.",
+          "VIP Summer Beauty Package — Deluxe Pedicure + BIAB with French Tips for only €85 (save €25). At Artane Nails & Beauty Lounge, Dublin 5.",
       },
-      { property: "og:title", content: "BIAB French Tip — €35 Special Offer" },
+      { property: "og:title", content: "VIP Summer Beauty Package — €85 Special Offer" },
       {
         property: "og:description",
-        content: "BIAB with French Tip — was €50, now €35. Valid until 24 May 2026.",
+        content: "Deluxe Pedicure + BIAB with French Tips — only €85. Save €25 at Artane Nails & Beauty Lounge.",
       },
     ],
   }),
@@ -49,19 +49,34 @@ function OffersPage() {
                 Limited Time
               </span>
               <h2 className="font-display text-5xl md:text-6xl mt-8 text-ink">
-                BIAB with French Tip
+                VIP Summer Beauty Package
               </h2>
               <div className="mt-6 flex items-center justify-center gap-4">
-                <span className="text-3xl text-muted-foreground line-through opacity-60">€50</span>
-                <span className="font-display text-6xl md:text-7xl text-rose">€35</span>
+                <span className="text-3xl text-muted-foreground line-through opacity-60">€110</span>
+                <span className="font-display text-6xl md:text-7xl text-rose">€85</span>
               </div>
               <p className="mt-5 text-muted-foreground text-lg max-w-md mx-auto">
-                Get our signature BIAB with a gorgeous French Tip at a special introductory price.
+                Treat yourself! Enjoy a Deluxe Pedicure and BIAB with French Tips at an unbeatable price. Save €25!
               </p>
+              
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-muted-foreground">
+                <div className="flex flex-col items-center p-3 bg-beige/50 rounded-xl">
+                  <span className="text-xl mb-1">☕</span>
+                  <span>Complimentary Tea/Coffee</span>
+                </div>
+                <div className="flex flex-col items-center p-3 bg-beige/50 rounded-xl">
+                  <span className="text-xl mb-1">✨</span>
+                  <span>Relaxing Luxury Environment</span>
+                </div>
+                <div className="flex flex-col items-center p-3 bg-beige/50 rounded-xl">
+                  <span className="text-xl mb-1">💖</span>
+                  <span>Premium Quality Service</span>
+                </div>
+              </div>
 
               <div className="mt-8">
                 <span className="rounded-full border border-rose/30 bg-rose/10 px-6 py-2.5 text-ink text-sm font-medium">
-                  Offer valid until 24 May 2026
+                  Bring a friend & both get 10% off your next visit!
                 </span>
               </div>
 

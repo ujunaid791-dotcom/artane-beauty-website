@@ -95,13 +95,32 @@ export function Navbar() {
 
         <Link
           to="/"
-          className="flex items-center justify-center"
+          className="flex flex-col items-center justify-center text-center hover:opacity-80 transition-opacity select-none"
         >
-          <img
-            src="/logo.png"
-            alt="Artane Nails & Beauty Lounge Logo"
-            className="h-14 md:h-28 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition-transform hover:scale-105"
-          />
+          <span
+            style={{
+              fontFamily: "'Bickham Script Pro', cursive",
+              fontSize: "clamp(3.2rem, 6vw, 4.6rem)",
+              color: "#6C4422",
+              lineHeight: 0.65,
+              letterSpacing: "0.01em",
+            }}
+          >
+            Artane
+          </span>
+          <span
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "clamp(0.6rem, 1.4vw, 0.9rem)",
+              color: "#CBA781",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              fontWeight: 500,
+              marginTop: "-8px",
+            }}
+          >
+            Nails &amp; Beauty Lounge
+          </span>
         </Link>
 
         {/* Right: Book Now */}

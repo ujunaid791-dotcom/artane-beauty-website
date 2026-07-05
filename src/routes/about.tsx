@@ -56,11 +56,12 @@ function AboutPage() {
       {/* HERO */}
       <section className="relative h-[60vh] min-h-[420px] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=1800&q=80"
-          alt="Inside Artane Nails & Beauty Lounge"
-          className="absolute inset-0 w-full h-full object-cover animate-ken-burns"
+          src="/team-girls.jpeg"
+          alt="The Team at Artane Nails & Beauty Lounge"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: "center 30%" }}
         />
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-6">
           <p className="text-gold uppercase tracking-luxe text-xs">About</p>
           <h1 className="font-display text-5xl md:text-7xl mt-5">Our Story</h1>
@@ -98,9 +99,9 @@ function AboutPage() {
           </SectionReveal>
           <SectionReveal delay={120}>
             <img
-              src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&q=80"
-              alt="Beauty treatment at Artane Nails & Beauty Lounge"
-              className="rounded-2xl object-cover w-full aspect-[4/5] shadow-card"
+              src="/environ-moisturiser.jpeg"
+              alt="Environ Skin EssentiA AVST Moisturiser 5"
+              className="rounded-2xl object-contain w-full aspect-[4/5] shadow-card bg-white"
             />
           </SectionReveal>
         </div>

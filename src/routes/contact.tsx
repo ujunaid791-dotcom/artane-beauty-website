@@ -65,9 +65,9 @@ function ContactPage() {
               <li className="flex gap-4">
                 <Clock className="text-rose mt-1" size={22} />
                 <div>
-                  <p className="font-medium">Now Open</p>
+                  <p className="font-medium">Walk-Ins Welcome</p>
                   <p className="text-muted-foreground">
-                    BIAB with French Tip — <s className="opacity-60">€50</s> €35. Valid until 24 May 2026.
+                    VIP Summer Package — Deluxe Pedicure + BIAB with French Tips €85.
                   </p>
                 </div>
               </li>
