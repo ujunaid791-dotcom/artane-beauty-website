@@ -24,12 +24,12 @@ export const Route = createFileRoute("/offers")({
 });
 
 function OffersPage() {
-  const { openModal } = useBooking();
+  const { openOfferModal } = useBooking();
 
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-ink text-white pt-40 pb-20 text-center overflow-hidden">
+      <section className="relative bg-ink text-white pt-40 pb-24 text-center overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top,_var(--gold),_transparent_60%)]" />
         <div className="relative max-w-3xl mx-auto px-6">
           <p className="text-gold uppercase tracking-luxe text-xs">Special Offer</p>
@@ -37,6 +37,11 @@ function OffersPage() {
           <p className="mt-5 text-white/75 text-lg">
             A stunning deal to celebrate our new chapter — don&apos;t miss out.
           </p>
+          <div className="mt-10">
+            <CTAButton onClick={openOfferModal} variant="rose">
+              Book This Offer
+            </CTAButton>
+          </div>
         </div>
       </section>
 
@@ -81,7 +86,7 @@ function OffersPage() {
               </div>
 
               <div className="mt-10">
-                <CTAButton onClick={openModal} variant="primary">
+                <CTAButton onClick={openOfferModal} variant="primary">
                   Book Now — (089) 950 8863
                 </CTAButton>
               </div>
@@ -119,6 +124,11 @@ function OffersPage() {
               >
                 <Phone size={18} className="text-rose" /> (089) 950 8863
               </a>
+            </div>
+            <div className="mt-10">
+              <CTAButton onClick={openOfferModal} variant="primary">
+                Book Your Appointment
+              </CTAButton>
             </div>
           </SectionReveal>
         </div>

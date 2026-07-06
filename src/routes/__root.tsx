@@ -75,6 +75,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 import { BookingProvider } from "@/lib/BookingContext";
 import { BookingModal } from "@/components/BookingModal";
+import { OfferBookingModal } from "@/components/OfferBookingModal";
+import { StudentBookingModal } from "@/components/StudentBookingModal";
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
@@ -89,6 +91,8 @@ function RootComponent() {
         <Footer />
         <MobileCallBar />
         <BookingModal />
+        <OfferBookingModal />
+        <StudentBookingModal />
       </BookingProvider>
     </QueryClientProvider>
   );

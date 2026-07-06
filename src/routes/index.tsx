@@ -80,7 +80,7 @@ const testimonials = [
 ];
 
 function HomePage() {
-  const { openModal } = useBooking();
+  const { openModal, openOfferModal, openStudentModal } = useBooking();
 
   return (
     <>
@@ -136,9 +136,10 @@ function HomePage() {
         <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-10 grid md:grid-cols-2 gap-8 md:gap-20 items-center">
           <SectionReveal>
             <img
-              src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=1200&q=80"
-              alt="Elegant beauty salon interior"
+              src="/team-girls.jpeg"
+              alt="The team at Artane Nails & Beauty Lounge"
               className="rounded-2xl md:rounded-3xl object-cover w-full aspect-[4/5] shadow-card"
+              style={{ objectPosition: "center 20%" }}
             />
           </SectionReveal>
           <SectionReveal delay={120}>
@@ -213,7 +214,7 @@ function HomePage() {
                 Valid student ID required at appointment.
               </p>
               <div className="mt-10">
-                <CTAButton onClick={openModal} variant="primary">
+                <CTAButton onClick={openStudentModal} variant="primary">
                   Book with Student Discount
                 </CTAButton>
               </div>
@@ -240,7 +241,7 @@ function HomePage() {
             </p>
             <p className="mt-3 text-white/50 text-sm">Bring a friend &amp; both get 10% off your next visit!</p>
             <div className="mt-10">
-              <CTAButton onClick={openModal} variant="rose">
+              <CTAButton onClick={openOfferModal} variant="rose">
                 Book Your Appointment
               </CTAButton>
             </div>
